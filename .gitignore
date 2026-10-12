@@ -1,0 +1,18 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Candidate-kit reference material; keep it local rather than publishing it.
+PROBLEM_STATEMENT.docx
+openapi.yaml
+DATA_MODEL.md
+sample_seed.py
+sample_data/
