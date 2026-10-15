@@ -13,7 +13,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Set `MONGO_URI` and `MONGO_DB` in the environment. To load the sample shapes into a disposable database, run `python sample_seed.py`; it replaces both sample collections in that database. Then start the API:
+Set `MONGO_URI` and `MONGO_DB` in the environment, then start the API:
 
 ```bash
 uvicorn app.main:app --port 8000

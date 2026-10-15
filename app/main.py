@@ -102,6 +102,8 @@ class RegularizeIn(BaseModel):
 
     @model_validator(mode="after")
     def reject_explicit_null_timestamps(self):
+        if "status" in self.model_fields_set and self.status is None:
+            raise ValueError("status cannot be null")
         for field in ("punch_in", "punch_out"):
             if field in self.model_fields_set and getattr(self, field) is None:
                 raise ValueError(f"{field} cannot be null")
