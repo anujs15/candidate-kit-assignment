@@ -1,4 +1,3 @@
-"""Employee Attendance & Analytics API. Run with uvicorn app.main:app --port 8000."""
 import json
 import os
 from contextlib import asynccontextmanager
@@ -15,6 +14,7 @@ from pymongo import ASCENDING, DESCENDING, MongoClient, ReturnDocument
 from pymongo.errors import DuplicateKeyError, PyMongoError
 
 load_dotenv(override=False)
+
 UTC = timezone.utc
 IST = timezone(timedelta(hours=5, minutes=30))
 PRESENCE = ("PRESENT", "WFH", "ON_DUTY")
